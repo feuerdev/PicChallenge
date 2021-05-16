@@ -16,16 +16,22 @@ struct StagingView: View {
     @StateObject var vm: StagingViewModel = StagingViewModel()
     
     @State private var showPicker: Bool = false
-    @State private var url = "A"
     
     var body: some View {
         GeometryReader { geo in
             ZStack {
                 VStack {
                     HStack {
-                        Text(url)
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
+                        VStack(alignment:.leading) {
+                            Text("Challenge")
+                                .font(.largeTitle)
+                                .fontWeight(.bold)
+                            Text("\(vm.photos.count) Photos")
+                                .font(.caption)
+                            
+                            
+                        }
+                        
                         Spacer()
                         Button(action: {                            
                             showPicker = true
@@ -36,8 +42,8 @@ struct StagingView: View {
                     }
                     
                     if vm.photos.count > 0 {
-                        ScrollView {
-                            GeometryReader { proxy in
+                        GeometryReader { proxy in
+                            ScrollView {
                                 LazyVGrid(columns: columns, spacing: 3) {
                                     ForEach(Array(vm.photos), id: \.hash) { photo in
                                         Image(uiImage: photo)
@@ -48,7 +54,7 @@ struct StagingView: View {
                                             .transition(.opacity)
                                     }
                                 }
-//                                .transition(.opacity)
+                                //                                .transition(.opacity)
                                 .animation(.easeInOut(duration: 1))
                             }
                         }
