@@ -1,0 +1,6 @@
+framework module Pods_PicChallenge_PicChallengeUITests {
+  umbrella header "Pods-PicChallenge-PicChallengeUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
