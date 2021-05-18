@@ -9,25 +9,29 @@ import SwiftUI
 
 struct MainView: View {
     
-    @StateObject var router: Router = Router()
+    @EnvironmentObject var app:AppInfo
     
     var body: some View {
-        switch router.currentPage {
-        case .staging:
-            TabView {
-                StagingView(router: router)
-                    .tabItem {
-                        Label("Challenge", systemImage: "arrow.down.forward.and.arrow.up.backward")
-                    }
-                
-                StagingView(router: router)
-                    .tabItem {
-                        Label("Explore", systemImage: "aqi.low")
-                    }
+        Group {
+            switch app.currentPage {
+            case .staging:
+                TabView {
+                    StagingView()
+                        .tabItem {
+                            Label("Challenge", systemImage: "arrow.down.forward.and.arrow.up.backward")
+                        }
+                    
+                    StagingView()
+                        .tabItem {
+                            Label("Explore", systemImage: "aqi.low")
+                        }
+                }
+                .accentColor(Constants.accentColor)
+            case .challenge:
+                ChallengeView()
+            case .winner(winner: let winner):
+                WinnerView()
             }
-            .accentColor(Constants.accentColor)
-        case .challenge:
-            ChallengeView()
         }
     }
     

@@ -13,12 +13,12 @@
 		2F30AB25264E7A0E00D7E137 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F30AB24264E7A0E00D7E137 /* ShareViewController.swift */; };
 		2F30AB2C264E7A0E00D7E137 /* PicChallengeShare.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2F30AB22264E7A0E00D7E137 /* PicChallengeShare.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2F357BFC264BE618009E6BDE /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F357BFB264BE618009E6BDE /* ImagePicker.swift */; };
-		2F357C01264D3286009E6BDE /* StagingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F357C00264D3286009E6BDE /* StagingViewModel.swift */; };
 		2F357C06264DEECA009E6BDE /* Pickable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F357C05264DEECA009E6BDE /* Pickable.swift */; };
-		2F5147822647FE52000B0A2A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5147812647FE52000B0A2A /* Router.swift */; };
 		2F7FFD87264A66D6008E54CF /* NavigationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FFD86264A66D6008E54CF /* NavigationPage.swift */; };
 		2F7FFD8C264A6815008E54CF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FFD8B264A6815008E54CF /* MainView.swift */; };
 		2F7FFD94264A6A0E008E54CF /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FFD93264A6A0E008E54CF /* ChallengeView.swift */; };
+		2F9AF9CA26540064005537EF /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AF9C926540064005537EF /* App.swift */; };
+		2F9AF9DB26540A63005537EF /* WinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AF9DA26540A63005537EF /* WinnerView.swift */; };
 		2FB0AAF52650CA89009D7CD9 /* StagedPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB0AAF42650CA89009D7CD9 /* StagedPhoto.swift */; };
 		2FF4C5DB263FB0100039F90A /* PicChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4C5DA263FB0100039F90A /* PicChallengeApp.swift */; };
 		2FF4C5DD263FB0100039F90A /* StagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4C5DC263FB0100039F90A /* StagingView.swift */; };
@@ -90,12 +90,12 @@
 		2F30AB42264E7C2700D7E137 /* PicChallenge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PicChallenge.entitlements; sourceTree = "<group>"; };
 		2F30AB49264E873800D7E137 /* PicChallengeShare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PicChallengeShare.entitlements; sourceTree = "<group>"; };
 		2F357BFB264BE618009E6BDE /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		2F357C00264D3286009E6BDE /* StagingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StagingViewModel.swift; sourceTree = "<group>"; };
 		2F357C05264DEECA009E6BDE /* Pickable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pickable.swift; sourceTree = "<group>"; };
-		2F5147812647FE52000B0A2A /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		2F7FFD86264A66D6008E54CF /* NavigationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPage.swift; sourceTree = "<group>"; };
 		2F7FFD8B264A6815008E54CF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		2F7FFD93264A6A0E008E54CF /* ChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
+		2F9AF9C926540064005537EF /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		2F9AF9DA26540A63005537EF /* WinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnerView.swift; sourceTree = "<group>"; };
 		2FB0AAF42650CA89009D7CD9 /* StagedPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StagedPhoto.swift; sourceTree = "<group>"; };
 		2FF4C5D7263FB0100039F90A /* PicChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FF4C5DA263FB0100039F90A /* PicChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicChallengeApp.swift; sourceTree = "<group>"; };
@@ -203,8 +203,7 @@
 		2F51478826481599000B0A2A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				2F5147812647FE52000B0A2A /* Router.swift */,
-				2F357C00264D3286009E6BDE /* StagingViewModel.swift */,
+				2F9AF9C926540064005537EF /* App.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -216,6 +215,7 @@
 				2FF4C5DC263FB0100039F90A /* StagingView.swift */,
 				2F7FFD93264A6A0E008E54CF /* ChallengeView.swift */,
 				2F357BFB264BE618009E6BDE /* ImagePicker.swift */,
+				2F9AF9DA26540A63005537EF /* WinnerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -533,13 +533,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F5147822647FE52000B0A2A /* Router.swift in Sources */,
+				2F9AF9DB26540A63005537EF /* WinnerView.swift in Sources */,
+				2F9AF9CA26540064005537EF /* App.swift in Sources */,
 				2F7FFD8C264A6815008E54CF /* MainView.swift in Sources */,
 				2FF4C5DD263FB0100039F90A /* StagingView.swift in Sources */,
 				2F7FFD94264A6A0E008E54CF /* ChallengeView.swift in Sources */,
 				2F7FFD87264A66D6008E54CF /* NavigationPage.swift in Sources */,
 				2F357BFC264BE618009E6BDE /* ImagePicker.swift in Sources */,
-				2F357C01264D3286009E6BDE /* StagingViewModel.swift in Sources */,
 				2FF4C5DB263FB0100039F90A /* PicChallengeApp.swift in Sources */,
 				2F357C06264DEECA009E6BDE /* Pickable.swift in Sources */,
 				2FB0AAF52650CA89009D7CD9 /* StagedPhoto.swift in Sources */,

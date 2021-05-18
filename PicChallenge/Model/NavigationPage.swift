@@ -5,8 +5,10 @@
 //  Created by Jannik Feuerhahn on 11.05.21.
 //
 
-import Foundation
+import SwiftUI
 
 enum NavigationPage {
-    case staging, challenge
+    case staging(challenge:Int)
+    case challenge(competitors:[UIImage])
+    case winner(winner:UIImage)
 }

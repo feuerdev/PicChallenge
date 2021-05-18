@@ -8,10 +8,14 @@
 import SwiftUI
 
 @main
-struct PicChallengeApp: App {    
+struct PicChallengeApp: App {
+    
+    var app = AppInfo()
+    
     var body: some Scene {
         WindowGroup {
             MainView()
+                .environmentObject(app)
         }
     }
 }

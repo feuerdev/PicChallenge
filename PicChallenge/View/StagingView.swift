@@ -12,8 +12,7 @@ struct StagingView: View {
     private let columns: [GridItem] =
         Array(repeating: .init(.flexible()), count: 3)
     
-    @StateObject var router:Router
-    @StateObject var vm: StagingViewModel = StagingViewModel()
+    @EnvironmentObject var app:AppInfo
     
     @State private var showPicker: Bool = false
     
@@ -26,10 +25,8 @@ struct StagingView: View {
                             Text("Challenge")
                                 .font(.largeTitle)
                                 .fontWeight(.bold)
-                            Text("\(vm.photos.count) Photos")
+                            Text("\(app.photos.count) Photos")
                                 .font(.caption)
-                            
-                            
                         }
                         
                         Spacer()
@@ -41,11 +38,11 @@ struct StagingView: View {
                         .font(.title)
                     }
                     
-                    if vm.photos.count > 0 {
+                    if app.photos.count > 0 {
                         GeometryReader { proxy in
                             ScrollView {
                                 LazyVGrid(columns: columns, spacing: 3) {
-                                    ForEach(Array(vm.photos), id: \.hash) { photo in
+                                    ForEach(Array(app.photos), id: \.hash) { photo in
                                         Image(uiImage: photo)
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
@@ -54,7 +51,7 @@ struct StagingView: View {
                                             .transition(.opacity)
                                     }
                                 }
-                                //                                .transition(.opacity)
+                                
                                 .animation(.easeInOut(duration: 1))
                             }
                         }
@@ -69,18 +66,18 @@ struct StagingView: View {
                 }
                 .padding([.horizontal, .top], 10)
                 
-                if vm.photos.count > 0 {
+                if app.photos.count > 0 {
                     VStack {
                         
                         Spacer()
                         
                         Button("Start") {
                             withAnimation() {
-                                router.navigate(to: .challenge)
+                                app.navigate(to: .challenge(competitors: Array(app.photos)))
                             }
                         }
                         .font(.title2)
-                        .foregroundColor(.white)
+                        .foregroundColor(Color(UIColor.systemBackground))
                         .frame(width: geo.size.width*0.7, height: 60)
                         .background(Constants.accentColor)
                         .cornerRadius(Constants.cornerRadius)
@@ -92,12 +89,11 @@ struct StagingView: View {
             }.sheet(isPresented: $showPicker, onDismiss: {
                 showPicker = false
             }, content: {
-                ImagePicker(isPresented: $showPicker, vm:vm)
+                ImagePicker(isPresented: $showPicker, vm:app)
             })
         }
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
-            print("foreground")
-            vm.loadSharedPhotos()
+            app.loadSharedPhotos()
         }
     }
 }
@@ -105,7 +101,7 @@ struct StagingView: View {
 struct StagingView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            StagingView(router: Router())
+            StagingView()
         }
     }
 }
