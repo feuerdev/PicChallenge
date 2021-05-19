@@ -19,6 +19,8 @@
 		2F7FFD94264A6A0E008E54CF /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FFD93264A6A0E008E54CF /* ChallengeView.swift */; };
 		2F9AF9CA26540064005537EF /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AF9C926540064005537EF /* App.swift */; };
 		2F9AF9DB26540A63005537EF /* WinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AF9DA26540A63005537EF /* WinnerView.swift */; };
+		2FA5400E265534C100FE2F10 /* Feuerlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F30AB18264E79C100D7E137 /* Feuerlib.framework */; };
+		2FA5400F265534C100FE2F10 /* Feuerlib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F30AB18264E79C100D7E137 /* Feuerlib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2FB0AAF52650CA89009D7CD9 /* StagedPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB0AAF42650CA89009D7CD9 /* StagedPhoto.swift */; };
 		2FF4C5DB263FB0100039F90A /* PicChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4C5DA263FB0100039F90A /* PicChallengeApp.swift */; };
 		2FF4C5DD263FB0100039F90A /* StagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4C5DC263FB0100039F90A /* StagingView.swift */; };
@@ -26,6 +28,7 @@
 		2FF4C5E2263FB0100039F90A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FF4C5E1263FB0100039F90A /* Preview Assets.xcassets */; };
 		2FF4C5ED263FB0100039F90A /* PicChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4C5EC263FB0100039F90A /* PicChallengeTests.swift */; };
 		2FF4C5F8263FB0110039F90A /* PicChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4C5F7263FB0110039F90A /* PicChallengeUITests.swift */; };
+		2FFEB7602655253E009B4E4D /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFEB75F2655253E009B4E4D /* ShareView.swift */; };
 		52179E44641C254320A2962A /* Pods_PicChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D81828B851F1ACD4AE2A939C /* Pods_PicChallengeTests.framework */; };
 		8F175070A0EA150638CF901D /* Pods_PicChallenge_PicChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF3209529BC8C2C328340DA /* Pods_PicChallenge_PicChallengeUITests.framework */; };
 		B03346BD90B757BCB7E91B7E /* Pods_PicChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71203C797AFC7B236DFCD411 /* Pods_PicChallenge.framework */; };
@@ -78,6 +81,17 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2FA54010265534C100FE2F10 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2FA5400F265534C100FE2F10 /* Feuerlib.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -109,6 +123,7 @@
 		2FF4C5F3263FB0110039F90A /* PicChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PicChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FF4C5F7263FB0110039F90A /* PicChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicChallengeUITests.swift; sourceTree = "<group>"; };
 		2FF4C5F9263FB0110039F90A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FFEB75F2655253E009B4E4D /* ShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareView.swift; sourceTree = "<group>"; };
 		384302F3B2BBBAA32C88AF51 /* Pods-PicChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicChallenge.debug.xcconfig"; path = "Target Support Files/Pods-PicChallenge/Pods-PicChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		45BE53DE06D26C54B332106E /* Pods-PicChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-PicChallengeTests/Pods-PicChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		50E3D00C0606C45555DC02BA /* Pods-PicChallenge-PicChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicChallenge-PicChallengeUITests.release.xcconfig"; path = "Target Support Files/Pods-PicChallenge-PicChallengeUITests/Pods-PicChallenge-PicChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FA5400E265534C100FE2F10 /* Feuerlib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +232,7 @@
 				2F7FFD93264A6A0E008E54CF /* ChallengeView.swift */,
 				2F357BFB264BE618009E6BDE /* ImagePicker.swift */,
 				2F9AF9DA26540A63005537EF /* WinnerView.swift */,
+				2FFEB75F2655253E009B4E4D /* ShareView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -303,6 +320,7 @@
 				2F30AB1E264E7A0E00D7E137 /* Sources */,
 				2F30AB1F264E7A0E00D7E137 /* Frameworks */,
 				2F30AB20264E7A0E00D7E137 /* Resources */,
+				2FA54010265534C100FE2F10 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -533,6 +551,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FFEB7602655253E009B4E4D /* ShareView.swift in Sources */,
 				2F9AF9DB26540A63005537EF /* WinnerView.swift in Sources */,
 				2F9AF9CA26540064005537EF /* App.swift in Sources */,
 				2F7FFD8C264A6815008E54CF /* MainView.swift in Sources */,
@@ -588,6 +607,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = PicChallengeShare/PicChallengeShare.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LQDASF64MT;
 				INFOPLIST_FILE = PicChallengeShare/Info.plist;
@@ -596,8 +616,9 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dev.feuer.PicChallenge.PicChallengeShare;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.feuer.challenge.PicChallengeShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -608,6 +629,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = PicChallengeShare/PicChallengeShare.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LQDASF64MT;
 				INFOPLIST_FILE = PicChallengeShare/Info.plist;
@@ -616,8 +638,9 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dev.feuer.PicChallenge.PicChallengeShare;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.feuer.challenge.PicChallengeShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -759,7 +782,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dev.feuer.PicChallenge;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.feuer.challenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -786,7 +809,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dev.feuer.PicChallenge;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.feuer.challenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
