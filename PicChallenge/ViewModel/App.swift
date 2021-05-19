@@ -85,4 +85,7 @@ class AppInfo:ObservableObject, Pickable {
         checkFinished()
         objectWillChange.send()
     }
+    
+    //MARK: - Intents Winner
+    
 }

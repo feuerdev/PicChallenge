@@ -30,7 +30,7 @@ struct MainView: View {
             case .challenge:
                 ChallengeView()
             case .winner(winner: let winner):
-                WinnerView()
+                WinnerView(winner: winner)
             }
         }
     }

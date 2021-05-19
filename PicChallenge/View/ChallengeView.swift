@@ -14,25 +14,33 @@ struct ChallengeView: View {
         GeometryReader { proxy in
             if proxy.size.width < proxy.size.height {
                 VStack(spacing: 0) {
-                    Image(uiImage: app.tournament!.nextOpenMatch()!.left!.winner!)
-                        .aspectFill(width: proxy.size.width, height: proxy.size.height/2)
-                        .onTapGesture { app.pickLeft() }
-                    Image(uiImage: app.tournament!.nextOpenMatch()!.right!.winner!)
-                        .aspectFill(width: proxy.size.width, height: proxy.size.height/2)
-                        .onTapGesture { app.pickRight() }
+                    if let left = app.tournament?.nextOpenMatch()?.left?.winner {
+                        Image(uiImage: left)
+                            .aspectFill(width: proxy.size.width, height: proxy.size.height/2)
+                            .onTapGesture { app.pickLeft() }
+                    }
+                    if let right = app.tournament?.nextOpenMatch()?.right?.winner {
+                        Image(uiImage: right)
+                            .aspectFill(width: proxy.size.width, height: proxy.size.height/2)
+                            .onTapGesture { app.pickRight() }
+                    }
                 }
             } else {
                 HStack(spacing: 0) {
-                    Image(uiImage: app.tournament!.nextOpenMatch()!.left!.winner!)
-                        .aspectFill(width: proxy.size.width/2, height: proxy.size.height)
-                        .onTapGesture {
-                            app.pickLeft()
-                        }
-                    Image(uiImage: app.tournament!.nextOpenMatch()!.right!.winner!)
-                        .aspectFill(width: proxy.size.width/2, height: proxy.size.height)
-                        .onTapGesture {
-                            app.pickRight()
-                        }
+                    if let left = app.tournament?.nextOpenMatch()?.left?.winner {
+                        Image(uiImage: left)
+                            .aspectFill(width: proxy.size.width/2, height: proxy.size.height)
+                            .onTapGesture {
+                                app.pickLeft()
+                            }
+                    }
+                    if let right = app.tournament?.nextOpenMatch()?.right?.winner {
+                        Image(uiImage: right)
+                            .aspectFill(width: proxy.size.width/2, height: proxy.size.height)
+                            .onTapGesture {
+                                app.pickRight()
+                            }
+                    }
                 }
             }
         }
