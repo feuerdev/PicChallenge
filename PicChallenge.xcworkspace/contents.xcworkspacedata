@@ -5,7 +5,7 @@
       location = "group:../feuerlib/Feuerlib.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:PicChallenge.xcodeproj">
+      location = "group:Piccy.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
