@@ -1,1 +1,4 @@
 xcuserdata
+
+# Local recovery checkpoints
+/artifacts/
